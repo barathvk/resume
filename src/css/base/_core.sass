@@ -1,0 +1,84 @@
+html, body
+  padding: 0
+  margin: 0
+  width: 100%
+  height: 100%
+  display: flex
+  flex: 1
+  background-color: #222
+  flex-direction: column
+  font-family: Raleway
+  align-items: center
+  justify-content: center
+  color: $primary
+  font-size: 12px
+  overflow: hidden
+  line-height: inherit
+.app
+  width: 8.5in
+  height: 11in
+  background-color: $white
+  margin: 20px
+  // box-shadow: $inside-shadow-wide
+  padding: .5in
+  box-sizing: border-box
+@for $i from 1 through 6
+  h#{$i}
+    font-weight: 400
+    padding: 0
+    margin: 0
+.fa
+  margin-right: 5px
+  &.tiny
+    font-size: 6px
+  &.icon-only
+    margin-right: 0
+@for $i from 1 through 12
+  .flex-#{$i}
+    flex: #{$i}
+.skills
+  font-weight: 500
+.skill
+  margin-bottom: 2px
+.fill
+  flex: 1
+  overflow: hidden
+.flex-column
+  display: flex
+  flex-direction: column
+.flex-row
+  display: flex
+  flex-direction: row
+.flex-center-align
+  align-items: center
+.flex-center
+  justify-content: center
+  align-items: center
+.flex-row-flow
+  display: flex
+  flex-flow: row wrap
+.title
+  font-size: 28px
+  padding: 12px
+  padding-bottom: 4px
+.space-left
+  margin-left: 5px
+.space-right
+  margin-right: 5px
+.grey-text
+  color: $darkgray-light
+.grey-text-light
+  color: darken($mediumgray-dark, 10)
+.heading
+  font-weight: 600
+  font-size: 16px
+  font-variant: small-caps
+hr
+  width: 100%
+  &.fading
+    border: 0
+    height: 1px
+    background-image: -webkit-linear-gradient(left, transparent, $mediumgray-dark, transparent)
+    background-image: -moz-linear-gradient(left, transparent, $mediumgray-dark, transparent)
+    background-image: -ms-linear-gradient(left, transparent, $mediumgray-dark, transparent)
+    background-image: -o-linear-gradient(left, transparent, $mediumgray-dark, transparent)
