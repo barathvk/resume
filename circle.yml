@@ -2,5 +2,6 @@ deployment:
   production:
     branch: master
     commands:
+      - npm i
       - npm run build
       - surge --domain resume.barath.ga --project ./build

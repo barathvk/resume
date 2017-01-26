@@ -6,7 +6,8 @@
     "node-sass": "^3.13.0",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
-    "serve": "^2.4.3"
+    "serve": "^2.4.3",
+    "surge": "^0.18.0"
   },
   "scripts": {
     "build": "pug --pretty --out ./build src/index.pug &&  node-sass -i --indent-width 2 -o ./build src/css/style.sass",
