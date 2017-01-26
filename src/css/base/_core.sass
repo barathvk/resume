@@ -14,14 +14,18 @@ html, body
   font-size: 12px
   overflow: hidden
   line-height: inherit
+a
+  color: $primary
+  text-decoration: none
 .app
   width: 8.5in
   height: 11in
   background-color: $white
   margin: 20px
-  // box-shadow: $inside-shadow-wide
+  box-shadow: $inside-shadow-wide
   padding: .5in
   box-sizing: border-box
+  overflow-y: auto !important
 @for $i from 1 through 6
   h#{$i}
     font-weight: 400
@@ -43,6 +47,7 @@ html, body
 .fill
   flex: 1
   overflow: hidden
+  min-height: fit-content
 .flex-column
   display: flex
   flex-direction: column
@@ -82,3 +87,29 @@ hr
     background-image: -moz-linear-gradient(left, transparent, $mediumgray-dark, transparent)
     background-image: -ms-linear-gradient(left, transparent, $mediumgray-dark, transparent)
     background-image: -o-linear-gradient(left, transparent, $mediumgray-dark, transparent)
+.role
+  margin-bottom: 4px
+.flex-right
+  justify-content: flex-end
+.italics
+  font-style: italic
+.mt
+  margin-top: 4px
+.mb
+  margin-bottom: 4px
+.ml
+  margin-left: 4px
+.mr
+  margin-right: 4px
+.indent
+  margin-left: 6px
+ul
+  -webkit-margin-before: 4px
+  -webkit-padding-start: 20px
+  -webkit-margin-after: 4px
+.bl
+  border-left: $default-border
+  margin-left: 4px
+  margin-right: 4px
+b
+  font-weight: 500
