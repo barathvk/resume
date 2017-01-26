@@ -10,7 +10,8 @@
     "surge": "^0.18.0"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified.\"",
     "build": "pug --pretty --out ./build src/index.pug &&  node-sass -i --indent-width 2 -o ./build src/css/style.sass",
-    "serve": "serve -s -c --port=3000 ./build"
+    "serve": "serve -s -c --port=3000 ./build"    
   }
 }
