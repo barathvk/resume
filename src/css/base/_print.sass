@@ -1,4 +1,5 @@
-@media screen
+@media print
+  $default-border: 0.1mm solid lighten($default-border-color, 10)
   html, body
     padding: 0
     margin: 0
@@ -14,13 +15,22 @@
     color: $primary
     font-size: 12px
     overflow: hidden
-    line-height: inherit
     min-height: fit-content
     &.pdf
       display: block
       overflow-y: auto
       height: auto
       background-color: $white
+      position: relative
+      -webkit-region-break-inside: avoid
+      .page
+        float: none
+  .page-break
+    page-break-after: always
+    display: block
+    min-height: 80px
+  .web-only
+    display: none
   a
     color: $primary
     text-decoration: none
@@ -34,7 +44,6 @@
     padding: .5in
     box-sizing: border-box
     overflow-y: auto !important
-    box-shadow: $glow-light-shadow
   @for $i from 1 through 6
     h#{$i}
       font-weight: 400
@@ -87,20 +96,15 @@
     font-weight: 600
     font-size: 16px
     font-variant: small-caps
-  .page-break
-    display: none
   .hr
     width: 100%
-    margin-top: 3px
     margin-bottom: 3px
+    margin-top: 3px
     &.fading
       border: 0
-      height: 1px
+      height: 0.1mm
       display: block
-      background-image: -webkit-linear-gradient(left, transparent, $mediumgray-dark, transparent)
-      background-image: -moz-linear-gradient(left, transparent, $mediumgray-dark, transparent)
-      background-image: -ms-linear-gradient(left, transparent, $mediumgray-dark, transparent)
-      background-image: -o-linear-gradient(left, transparent, $mediumgray-dark, transparent)
+      border-bottom: $default-border
   .role
     margin-bottom: 4px
   .flex-right
