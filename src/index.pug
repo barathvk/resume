@@ -12,7 +12,6 @@ html
           include resume
     script(src='//static.getclicky.com/js', type='text/javascript')
     script(type='text/javascript').
-      try{ clicky.init(101020701); }catch(e){}
-    noscript
-      p
-        img(alt='Clicky', width='1', height='1', src='//in.getclicky.com/101020701ns.gif')
+      try{ clicky.init(101020701); console.log('init');}catch(e){console.error(e)}
+    p
+      img(alt='Clicky', width='1', height='1', src='//in.getclicky.com/101020701ns.gif')
