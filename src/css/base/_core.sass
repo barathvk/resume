@@ -16,6 +16,8 @@
     overflow: hidden
     line-height: inherit
     min-height: fit-content
+    min-height: -moz-fit-content
+    min-height: -webkit-fit-content
     &.pdf
       display: block
       overflow-y: auto
@@ -26,6 +28,8 @@
     text-decoration: none
   li
     margin-bottom: 4px
+  .proj-title
+    min-height: 25px !important
   .app
     width: 8.5in
     height: 11in
@@ -35,6 +39,8 @@
     box-sizing: border-box
     overflow-y: auto !important
     box-shadow: $glow-light-shadow
+  .pages
+    min-height: 1600px !important
   @for $i from 1 through 6
     h#{$i}
       font-weight: 400
@@ -57,6 +63,8 @@
     flex: 1
     overflow: hidden
     min-height: fit-content
+    min-height: -moz-fit-content
+    min-height: -webkit-fit-content
   .flex-column
     display: flex
     flex-direction: column
