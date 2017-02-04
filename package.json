@@ -13,6 +13,7 @@
     "test": "echo \"Error: no test specified.\"",
     "dev": "nodemon --ext pug,sass --exec \"pug --pretty --out ./build src/index.pug && pug --pretty --out ./build src/pdf.pug &&  node-sass -i --indent-width 2 -o ./build src/css/style.sass\"",
     "serve": "serve -s -c --port=3000 ./build",
-    "build": "pug --pretty --out ./build src/index.pug &&  pug --pretty --out ./build src/pdf.pug && node-sass -i --indent-width 2 -o ./build src/css/style.sass && cp src/resume.pdf build/resume.pdf"
+    "build": "pug --pretty --out ./build src/index.pug &&  pug --pretty --out ./build src/pdf.pug && node-sass -i --indent-width 2 -o ./build src/css/style.sass && cp src/resume.pdf build/resume.pdf",
+    "deploy": "npm run build && surge --domain resume.barath.ga --project ./build"
   }
 }
